@@ -2,7 +2,7 @@ package com.example.rickandmorty.service.impl;
 
 import com.example.rickandmorty.dto.external.dto.ApiCharacterDto;
 import com.example.rickandmorty.dto.external.dto.ApiResponseDto;
-import com.example.rickandmorty.dto.external.mapper.ApiParser;
+import com.example.rickandmorty.dto.external.mapper.ApiMapper;
 import com.example.rickandmorty.model.MovieCharacter;
 import com.example.rickandmorty.repository.MovieCharacterRepository;
 import com.example.rickandmorty.service.HttpClient;
@@ -24,12 +24,12 @@ import org.springframework.stereotype.Service;
 public class MovieCharacterServiceImpl implements MovieCharacterService {
     private final HttpClient httpClient;
     private final MovieCharacterRepository characterRepository;
-    private final ApiParser<MovieCharacter, ApiCharacterDto> characterMapper;
+    private final ApiMapper<MovieCharacter, ApiCharacterDto> characterMapper;
 
     public MovieCharacterServiceImpl(
             HttpClient httpClient,
             MovieCharacterRepository characterRepository,
-            ApiParser<MovieCharacter, ApiCharacterDto> characterMapper) {
+            ApiMapper<MovieCharacter, ApiCharacterDto> characterMapper) {
         this.httpClient = httpClient;
         this.characterRepository = characterRepository;
         this.characterMapper = characterMapper;
