@@ -1,7 +1,6 @@
 package com.example.rickandmorty.dto.response;
 
-import com.example.rickandmorty.model.Gender;
-import com.example.rickandmorty.model.Status;
+import com.example.rickandmorty.model.MovieCharacter;
 import lombok.Getter;
 import lombok.Setter;
 
@@ -10,6 +9,6 @@ import lombok.Setter;
 public class MovieCharacterResponseDto {
     private Long id;
     private String name;
-    private Status status;
-    private Gender gender;
+    private MovieCharacter.Status status;
+    private MovieCharacter.Gender gender;
 }

@@ -27,4 +27,27 @@ public class MovieCharacter {
     private Status status;
     @Enumerated(EnumType.STRING)
     private Gender gender;
+
+    public enum Status {
+        ALIVE("Alive"),
+        DEAD("Dead"),
+        UNKNOWN("unknown");
+        private String status;
+
+        Status(String status) {
+            this.status = status;
+        }
+    }
+
+    public enum Gender {
+        MALE("Male"),
+        FEMALE("Female"),
+        GENDERLESS("Genderless"),
+        UNKNOWN("unknown");
+        private String gender;
+
+        Gender(String gender) {
+            this.gender = gender;
+        }
+    }
 }
